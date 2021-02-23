@@ -4,33 +4,27 @@ import { Button, View } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
 
-function HomeScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Button
-        onPress={() => navigation.navigate('Notifications')}
-        title="Go to notifications"
-      />
-    </View>
-  );
-}
-
-function NotificationsScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Button onPress={() => navigation.goBack()} title="Go back home" />
-    </View>
-  );
-}
+import FloatingScreen from './src/screens/FloatingScreen';
+import FlexScreen from './src/screens/FlexScreen';
+import AlignSelfScreen from './src/screens/AlignSelfScreen';
+import DefaultChildWidthScreen from './src/screens/DefaultChildWidthScreen';
+import DynamicScreen from './src/screens/DynamicScreen';
 
 const Drawer = createDrawerNavigator();
 
 export default function App() {
+  // scrreen component name convention {flex_direction}_{justifyContent}_{alignItems}
   return (
     <NavigationContainer>
       <Drawer.Navigator initialRouteName="Home">
-        <Drawer.Screen name="Home" component={HomeScreen} />
-        <Drawer.Screen name="Notifications" component={NotificationsScreen} />
+        <Drawer.Screen name="FloatingScreen" component={FloatingScreen} />
+        <Drawer.Screen name="FlexScreen" component={FlexScreen} />
+        <Drawer.Screen name="AlignSelfScreen" component={AlignSelfScreen} />
+        <Drawer.Screen
+          name="DefaultChildWidthScreen"
+          component={DefaultChildWidthScreen}
+        />
+        <Drawer.Screen name="DynamicScreen" component={DynamicScreen} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
