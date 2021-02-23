@@ -9,8 +9,8 @@ export default function Component(props) {
       <LayoutContainer
         style={{
           flexDirection: 'row',
-          // justifyContent: 'flex-start', // default
-          // alignItems: 'flex-start', // default
+          justifyContent: 'center', // default
+          alignItems: 'center', // default
         }}>
         <View
           style={{
@@ -20,6 +20,8 @@ export default function Component(props) {
             alignSelf: 'flex-start',
           }}
         />
+        <View style={{ width: 50, height: 50, backgroundColor: 'skyblue' }} />
+        <View style={{ width: 50, height: 50, backgroundColor: 'steelblue' }} />
       </LayoutContainer>
     </ScreenContainer>
   );
