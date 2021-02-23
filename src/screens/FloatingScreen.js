@@ -5,7 +5,7 @@ import LayoutContainer from '../components/LayoutContainer';
 
 export default function Component() {
   return (
-    <ScreenContainer>
+    <ScreenContainer title="FloatingScreen">
       <LayoutContainer
         style={{
           flexDirection: 'column',
