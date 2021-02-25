@@ -10,9 +10,9 @@ export default function Component() {
         style={{
           flexDirection: 'column',
         }}>
-        <View style={{ flex: 1, height: 50, backgroundColor: 'powderblue' }} />
-        <View style={{ flex: 1, height: 50, backgroundColor: 'skyblue' }} />
-        <View style={{ flex: 1, height: 50, backgroundColor: 'steelblue' }} />
+        <View style={{ flex: 1, height: 50, backgroundColor: 'red' }} />
+        <View style={{ flex: 1, height: 50, backgroundColor: 'green' }} />
+        <View style={{ flex: 1, height: 50, backgroundColor: 'blue' }} />
       </LayoutContainer>
     </ScreenContainer>
   );

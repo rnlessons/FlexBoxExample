@@ -12,9 +12,9 @@ export default function Component(props) {
           // justifyContent: 'flex-start', // default
           // alignItems: 'flex-start', // default
         }}>
-        <View style={{ height: 50, backgroundColor: 'powderblue' }} />
-        <View style={{ height: 50, backgroundColor: 'skyblue' }} />
-        <View style={{ height: 50, backgroundColor: 'steelblue' }} />
+        <View style={{ height: 50, backgroundColor: 'red' }} />
+        <View style={{ height: 50, backgroundColor: 'green' }} />
+        <View style={{ height: 50, backgroundColor: 'blue' }} />
       </LayoutContainer>
     </ScreenContainer>
   );

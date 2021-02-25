@@ -17,11 +17,9 @@ export default function Component(props) {
           justifyContent,
           alignItems,
         }}>
-        <View
-          style={{ width: 50, height: 50, backgroundColor: 'powderblue' }}
-        />
-        <View style={{ width: 50, height: 50, backgroundColor: 'skyblue' }} />
-        <View style={{ width: 50, height: 50, backgroundColor: 'steelblue' }} />
+        <View style={{ width: 50, height: 50, backgroundColor: 'red' }} />
+        <View style={{ width: 50, height: 50, backgroundColor: 'green' }} />
+        <View style={{ width: 50, height: 50, backgroundColor: 'blue' }} />
       </LayoutContainer>
       <LayoutController
         flexDirection={flexDirection}

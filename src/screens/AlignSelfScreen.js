@@ -16,12 +16,12 @@ export default function Component(props) {
           style={{
             width: 50,
             height: 50,
-            backgroundColor: 'powderblue',
+            backgroundColor: 'red',
             alignSelf: 'flex-start',
           }}
         />
-        <View style={{ width: 50, height: 50, backgroundColor: 'skyblue' }} />
-        <View style={{ width: 50, height: 50, backgroundColor: 'steelblue' }} />
+        <View style={{ width: 50, height: 50, backgroundColor: 'green' }} />
+        <View style={{ width: 50, height: 50, backgroundColor: 'blue' }} />
       </LayoutContainer>
     </ScreenContainer>
   );
