@@ -4,8 +4,8 @@ import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 const Btn = ({ value, title, onPress }) => {
   return (
     <TouchableOpacity
-      onPress={() => onPress(title)}
-      style={[styles.btn, value === title && styles.selected]}>
+      style={[styles.btn, value === title && styles.selected]}
+      onPress={() => onPress(title)}>
       <Text>{title}</Text>
     </TouchableOpacity>
   );
@@ -15,7 +15,7 @@ export default function LayoutController({
   flexDirection,
   justifyContent,
   alignItems,
-  setFlexDirecion,
+  setFlexDirection,
   setJustifyContent,
   setAlignItems,
 }) {
@@ -23,16 +23,8 @@ export default function LayoutController({
     <View style={styles.container}>
       <View style={styles.row}>
         <Text style={styles.title}>flexDirection: </Text>
-        <Btn
-          title="column"
-          onPress={() => setFlexDirecion('column')}
-          value={flexDirection}
-        />
-        <Btn
-          title="row"
-          onPress={() => setFlexDirecion('row')}
-          value={flexDirection}
-        />
+        <Btn title="column" onPress={setFlexDirection} value={flexDirection} />
+        <Btn title="row" onPress={setFlexDirection} value={flexDirection} />
       </View>
       <View style={styles.row}>
         <Text style={styles.title}>justifyContent: </Text>
@@ -52,12 +44,12 @@ export default function LayoutController({
           value={justifyContent}
         />
         <Btn
-          title="space-between"
+          title="space-around"
           onPress={setJustifyContent}
           value={justifyContent}
         />
         <Btn
-          title="space-around"
+          title="space-between"
           onPress={setJustifyContent}
           value={justifyContent}
         />
@@ -79,9 +71,9 @@ const styles = StyleSheet.create({
   },
   row: {
     flexWrap: 'wrap',
-    padding: 10,
     flexDirection: 'row',
     alignItems: 'center',
+    padding: 10,
   },
   title: {
     width: 100,

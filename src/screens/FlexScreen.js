@@ -1,18 +1,30 @@
 import React from 'react';
-import { View } from 'react-native';
+import { SafeAreaView, Text, View, StyleSheet } from 'react-native';
 import ScreenContainer from '../components/ScreenContainer';
 import LayoutContainer from '../components/LayoutContainer';
 
-export default function Component() {
+export default function FlexScreen() {
   return (
-    <ScreenContainer>
-      <LayoutContainer
-        style={{
-          flexDirection: 'column',
-        }}>
-        <View style={{ flex: 1, height: 50, backgroundColor: 'red' }} />
-        <View style={{ flex: 1, height: 50, backgroundColor: 'green' }} />
-        <View style={{ flex: 1, height: 50, backgroundColor: 'blue' }} />
+    <ScreenContainer title="FlexScreen">
+      <LayoutContainer>
+        <View style={{ flex: 1, backgroundColor: 'red' }} />
+        <View style={{ flex: 1, backgroundColor: 'green' }} />
+        <View style={{ flex: 1, backgroundColor: 'blue' }} />
+      </LayoutContainer>
+      <LayoutContainer>
+        <View style={{ flex: 2, backgroundColor: 'red' }} />
+        <View style={{ flex: 3, backgroundColor: 'green' }} />
+        <View style={{ flex: 2, backgroundColor: 'blue' }} />
+      </LayoutContainer>
+      <LayoutContainer style={{ flexDirection: 'row' }}>
+        <View style={{ flex: 1, backgroundColor: 'red' }} />
+        <View style={{ flex: 1, backgroundColor: 'green' }} />
+        <View style={{ flex: 1, backgroundColor: 'blue' }} />
+      </LayoutContainer>
+      <LayoutContainer style={{ flexDirection: 'row' }}>
+        <View style={{ flex: 1, backgroundColor: 'red' }} />
+        <View style={{ flex: 2, backgroundColor: 'green' }} />
+        <View style={{ flex: 1, backgroundColor: 'blue' }} />
       </LayoutContainer>
     </ScreenContainer>
   );
